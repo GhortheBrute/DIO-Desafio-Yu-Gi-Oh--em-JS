@@ -89,7 +89,7 @@ async function checkDuelResults(cardId, computerCardId) {
         state.score.computerScore++;
     }
 
-    await playAudio(duelResults);
+    await playAudio(duelResults.toLowerCase());
     return duelResults;
 }
 
