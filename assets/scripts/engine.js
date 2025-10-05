@@ -76,16 +76,16 @@ async function removeAllCardsImages() {
 }
 
 async function checkDuelResults(cardId, computerCardId) {
-    let duelResults = "Draw";
+    let duelResults = "draw";
     let playerCard = cardData[cardId];
     
     if (playerCard.WinOf.includes(computerCardId)) {
-        duelResults = "Win";
+        duelResults = "win";
         state.score.playerScore++;
     }
 
     if (playerCard.LoseOf.includes(computerCardId)) {
-        duelResults = "Lose";
+        duelResults = "lose";
         state.score.computerScore++;
     }
 
@@ -165,9 +165,15 @@ async function resetDuel(){
 }
 
 async function playAudio(status) {
-    const audio = new Audio(`./assets/medias/audios/${status}.wav`);
+    const audio = new Audio(`./assets//medias/audios/${status}.wav`);
     audio.volume = 0.2;
-    await audio.play();
+
+    try{
+        await audio.play();
+    }catch(err){
+        console.error("Audio playback failed:", err);
+    }
+    
 }
 
 function init(){
