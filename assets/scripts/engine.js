@@ -24,8 +24,8 @@ const state = {
     }
 };
 
-const pathImages = '/assets/medias/icons/';
-const downCard = '/assets/medias/icons/card-back.png';
+const pathImages = './assets/medias/icons/';
+const downCard = './assets/medias/icons/card-back.png';
 let playCount = 0;
 
 const cardData = [
@@ -165,7 +165,7 @@ async function resetDuel(){
 }
 
 async function playAudio(status) {
-    const audio = new Audio(`/assets/medias/audios/${status}.wav`);
+    const audio = new Audio(`./assets/medias/audios/${status}.wav`);
     audio.volume = 0.2;
     await audio.play();
 }
