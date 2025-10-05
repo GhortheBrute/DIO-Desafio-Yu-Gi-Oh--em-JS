@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Yu-Gi-Oh!</title>
+    <link rel="shortcut icon" href="assets/medias/favicon/Favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+    <audio id="bgm" loop>
+        <source src="/assets/medias/audios/egyptian_duel.mp3" type="audio/mp3"/>
+    </audio>
+    <div class="bg-video">
+        <video class="video" autoplay loop muted>
+            <source src="assets/medias/video/yugi.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="container">
+        <div class="conteiner__left framed-golden-2">
+            <div class="score_box frame">
+                <span id="score_points">Win : 0 | Lose: 0</span>
+            </div>
+            <div class="menu_avatar">
+                <img src="" alt="" id="card-image">
+            </div>
+            <div class="card_details frame">
+                <p id="card-name"></p>
+                <p id="card-type"></p>
+            </div>
+        </div>
+        <div class="conteiner__right">
+            <div class="card-box__container">
+
+            <div id="computer-cards" class="card-box framed"></div>
+
+            <div class="card-versus__container">
+                <div class="versus-top">
+                    <div class="card-infield">
+                        <img id="player-field-card" height="180px" width="125px">
+                    </div>
+                    <img height="100px" src="assets/medias/icons/millenium2.png" alt="millenium2 icon">
+                    <div class="card-infield">
+                        <img id="computer-field-card" height="180px" width="125px">
+                    </div>
+                </div>
+                <div class="versus-bottom">
+                    <button id="next-duel" class="rpgui-button" onclick="resetDuel()">GANHOU</button>
+                </div>
+            </div>
+
+            <div id="player-cards" class="card-box framed"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer><a href="https://freesound.org/people/akelley6/sounds/825715/">Synthy Error</a> by <a href="https://freesound.org/people/akelley6/">akelley6</a> | License: <a href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0</a></footer>
+    <script src="assets/scripts/engine.js"></script>
+</body>
+</html>
