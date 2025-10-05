@@ -3,7 +3,7 @@
 @import url(containers_and_frames.css);
 
 body{
-    cursor: url("./assets/medias/cursor/yugicursor.png"), default;
+    cursor: url("../medias/cursor/yugicursor.png"), default;
 }
 
 button,
@@ -11,7 +11,7 @@ a,
 img:hover,
 button:hover,
 a:hover{
-    cursor: url("./assets/medias/cursor/yamiyugicursorGLOW.png"), auto;
+    cursor: url("../medias/cursor/yamiyugicursorGLOW.png"), auto;
 }
 
 .bg-video {
